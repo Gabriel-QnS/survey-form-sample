@@ -4,7 +4,7 @@
 # linters documentation
 
 # all, none, or list of linter keys
-APPLY_FIXES: none
+APPLY_FIXES: all
 
 # If you use ENABLE variable, all other languages/formats/tooling-formats will
 # be disabled by default
@@ -20,7 +20,7 @@ APPLY_FIXES: none
 
 SHOW_ELAPSED_TIME: true
 
-FILEIO_REPORTER: false
+FILEIO_REPORTER: true
 
 # Uncomment if you want MegaLinter to detect errors but not block CI to pass
 # DISABLE_ERRORS: true
