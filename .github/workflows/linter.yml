@@ -1,0 +1,37 @@
+#name given to the action
+
+name: Lint Code Base with *Magic*
+
+#when does the action happen?
+
+#on: [push, pull_request] this version runs on both pulls and pushes
+#the next one runs only on pulls
+
+on:
+  push:
+    branches-ignore: [master, main]
+  pull_request:
+    branches: [master, main]
+
+# jobs are the way github is indicated how to run certain actions, for the job build, here it runs this action and does so by using the latest ubuntu version available
+
+jobs:
+  build:
+    name: Lint Code Base
+    runs-on: ubuntu-latest
+    #the steps for the job. There's 2: checkout, run the linter
+    steps:
+
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Lint Code Base
+        uses: github/super-linter@v4
+        env:
+          VALIDATE_ALL_CODEBASE: true
+          VALIDATE_JAVASCRIPT_ES: true
+          VALIDATE_PYTHON_BLACK: true
+          VALIDATE_HTML: true
+          VALIDATE_CSS: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
