@@ -12,14 +12,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
-    "bootstrap": "^5.3.2",
-    "vite": "^5.0.10"
-=======
     "bootstrap": "^5.3.2"
   },
   "devDependencies": {
-    "htmlhint": "^1.1.4"
->>>>>>> unlinted
+    "htmlhint": "^1.1.4",
+    "vite": "^5.0.10"
   }
 }
