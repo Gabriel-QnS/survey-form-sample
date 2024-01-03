@@ -1,3 +1,5 @@
+@import url('./node_modules/bootstrap/dist/css/bootstrap.min.css');
+
 html{
     box-sizing: border-box;
 }
@@ -72,4 +74,9 @@ main{
     100%{
         transform: scale(0.999);
     }
+}
+
+.wrapper-description{
+    max-width: 300px;
+    margin: auto
 }

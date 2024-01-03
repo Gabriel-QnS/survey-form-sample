@@ -4,27 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Form</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body class="container-md">
     <header class="d-flex flex-column">
-        <h1 class="display-1 p-1 text-center bg-danger border border-5 border-light" id="title">Survey Form</h1>
-        <p id="description">This form was sent to you because we recently delivered one of our prestigious <strong>Life-time Guaranteed Feline Happiness Care Kit</strong>.</p>
-        <p>We value your opinion!</p>
+        <h1 class="p-1 text-center bg-danger border border-5 border-light" id="title">We would love to hear your feedback</h1>
+        <div class="wrapper-description mb-2 bg-dark p-2 border border-2 border-light">
+            <p id="description">This form was sent to you because we recently delivered one of our prestigious <strong>Life-time Guaranteed Feline Happiness Care Kit</strong>.</p>
+            <p>And we want to know if you <i>(and your cat)</i> liked it. We value your opinion!</p>
+        </div>
         <img class="align-self-center" src="https://i.ibb.co/qNysDSy/crowned-cat1.jpg" alt="crowned-cat1"/>
     </header>
     <main>
         <form action="" id="survey-form" class="container border border-4 border-light p-2 d-flex flex-column">
 
             <fieldset class="d-flex flex-column personal-info">
-                <legend>Personal Information</legend>
+                <legend>Information</legend>
                 <label for="name" id="name-label">
-                    <input type="text" id="name" placeholder="Catarina D. ..." required><p class="bg-danger text-light text-center">Name</p>
+                    <input type="text" id="name" placeholder="Catarina D. ..." required><p class="bg-danger text-light text-center">Your Name</p>
                 </label>
     
                 <label for="catname" id="catname-label">
-                    <input type="text" id="catname" placeholder="Mr. Bigglesworth, Conqueror of the Frozen Wastes" required><p class="bg-danger text-light text-center">Cat's Name</p>
+                    <input type="text" id="catname" placeholder="Mr. Bigglesworth, Conqueror of the Frozen Wastes" required><p class="bg-danger text-light text-center">Your cat's Name</p>
                 </label>
     
                 <label id="email-label" for="email">
@@ -33,7 +36,7 @@
 
                 
                 <label for="satisfaction" id="number-label">
-                    <p id="satisfaction-p">How would you qualify from 1 to 10 your cat's (and your own) satisfaction with regards to your purchase?</p>
+                    <p id="satisfaction-p">How would you qualify from 1 to 10 your satisfaction with regards to your purchase?</p>
                     <input id="number" type="number" max="10" min="1" placeholder="10" value="10">
                 </label>
             
@@ -91,9 +94,9 @@
             </button>
         </form>
     </main>
-    <footer>
+    <footer class="text-center text-lg-end p-2">
         <h6>
-            Made by <a class="link-danger" href="https://github.com/Quo210">Quo</a>
+            Made by <a class="link-danger" href="https://github.com/Quo210">Gabriel</a>
         </h6>
     </footer>
 </body>
